@@ -6,10 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
 import { Services } from "./pages/Services";
-import { WeddingPackages } from "./pages/WeddingPackages";
-import { Gallery } from "./pages/Gallery";
 import { Reviews } from "./pages/Reviews";
-import { BehindScenes } from "./pages/BehindScenes";
+import { Awards } from "./pages/Awards";
 import { Contact } from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -25,10 +23,8 @@ const App = () => (
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="services" element={<Services />} />
-            <Route path="wedding-packages" element={<WeddingPackages />} />
-            <Route path="gallery" element={<Gallery />} />
             <Route path="reviews" element={<Reviews />} />
-            <Route path="behind-scenes" element={<BehindScenes />} />
+            <Route path="awards" element={<Awards />} />
             <Route path="contact" element={<Contact />} />
           </Route>
           <Route path="*" element={<NotFound />} />

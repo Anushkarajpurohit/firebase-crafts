@@ -7,10 +7,8 @@ import { cn } from "@/lib/utils";
 const navigationItems = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
-  { name: "Wedding Packages", href: "/wedding-packages" },
-  { name: "Gallery", href: "/gallery" },
   { name: "Reviews", href: "/reviews" },
-  { name: "Behind the Scenes", href: "/behind-scenes" },
+  { name: "Awards", href: "/awards" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -25,7 +23,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-xl font-bold text-foreground">
-              Atharva Kadam Photography
+              Dhan Ketuu Financial Services
             </span>
           </Link>
 

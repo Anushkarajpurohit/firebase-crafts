@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Camera, Award, Users, Heart } from "lucide-react";
+import { TrendingUp, Award, Users, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
@@ -12,20 +12,20 @@ export const Home = () => {
           {/* Content */}
           <div className="space-y-6">
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-              Capturing Life's
-              <span className="text-primary block">Beautiful Moments</span>
+              Building Your
+              <span className="text-primary block">Financial Future</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Welcome to Atharva Kadam Photography, where every frame tells a story. 
-              I specialize in creating timeless memories through the art of photography, 
-              capturing the essence of your most precious moments with elegance and style.
+              Welcome to Dhan Ketuu Financial Services, where your financial dreams become reality. 
+              I specialize in comprehensive financial planning, investment management, and insurance 
+              solutions tailored to secure your family's future with expertise and trust.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link to="/gallery">View My Work</Link>
+                <Link to="/services">Explore Services</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Get Free Consultation</Link>
               </Button>
             </div>
           </div>
@@ -34,8 +34,8 @@ export const Home = () => {
           <div className="relative">
             <div className="aspect-[3/4] bg-gradient-to-b from-muted to-accent rounded-lg shadow-2xl flex items-center justify-center">
               <div className="text-center">
-                <Camera className="h-16 w-16 text-primary mx-auto mb-4" />
-                <p className="text-muted-foreground">Portrait Photo</p>
+                <TrendingUp className="h-16 w-16 text-primary mx-auto mb-4" />
+                <p className="text-muted-foreground">Professional Portrait</p>
                 <p className="text-sm text-muted-foreground">Coming Soon</p>
               </div>
             </div>
@@ -48,14 +48,14 @@ export const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-              About Atharva Kadam
+              About Dhan Ketuu
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With over 8 years of experience in professional photography, I have dedicated 
-              my career to capturing the beauty in every moment. My passion lies in creating 
-              authentic, emotional imagery that tells your unique story. From intimate 
-              weddings to corporate events, I bring a keen eye for detail and a commitment 
-              to excellence to every shoot.
+              With over 12 years of experience in financial services, I have dedicated 
+              my career to helping individuals and families achieve their financial goals. 
+              My expertise spans mutual funds, insurance, investment portfolio management, 
+              and comprehensive financial planning. I believe in building long-term 
+              relationships based on trust, transparency, and personalized service.
             </p>
           </div>
         </div>
@@ -66,10 +66,10 @@ export const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Camera, number: "500+", label: "Projects Completed" },
-              { icon: Heart, number: "200+", label: "Happy Couples" },
-              { icon: Award, number: "15+", label: "Awards Won" },
-              { icon: Users, number: "1000+", label: "Satisfied Clients" },
+              { icon: TrendingUp, number: "₹500Cr+", label: "Assets Under Management" },
+              { icon: Users, number: "2000+", label: "Happy Clients" },
+              { icon: Award, number: "25+", label: "Industry Awards" },
+              { icon: Shield, number: "15+", label: "Insurance Partners" },
             ].map((stat, index) => (
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardContent className="space-y-3">
@@ -87,14 +87,14 @@ export const Home = () => {
       <section className="py-20 bg-primary/5">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            Ready to Create Something Beautiful?
+            Ready to Secure Your Financial Future?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's work together to capture your special moments and create memories 
-            that will last a lifetime.
+            Let's work together to create a personalized financial strategy that 
+            grows your wealth and protects what matters most to you.
           </p>
           <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
-            <Link to="/contact">Book Your Session</Link>
+            <Link to="/contact">Schedule Free Consultation</Link>
           </Button>
         </div>
       </section>

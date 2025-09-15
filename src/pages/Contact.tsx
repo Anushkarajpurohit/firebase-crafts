@@ -1,10 +1,10 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Camera } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export const Contact = () => {
   return (
@@ -16,19 +16,22 @@ export const Contact = () => {
             Get In Touch
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Ready to capture your special moments? I'd love to hear about your vision 
-            and discuss how we can create something beautiful together.
+            Ready to start your financial journey? Contact me for a free consultation 
+            and discover how we can help you achieve your financial goals.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="order-2 lg:order-1">
+          <Card>
             <CardHeader>
-              <CardTitle className="text-2xl text-foreground">Send Me a Message</CardTitle>
+              <CardTitle className="text-2xl text-foreground">Schedule Free Consultation</CardTitle>
+              <CardDescription>
+                Fill out the form below and I'll get back to you within 24 hours.
+              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="firstName">First Name</Label>
                   <Input id="firstName" placeholder="Enter your first name" />
@@ -38,160 +41,128 @@ export const Contact = () => {
                   <Input id="lastName" placeholder="Enter your last name" />
                 </div>
               </div>
-
+              
               <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
-                <Input id="email" type="email" placeholder="Enter your email" />
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" type="email" placeholder="your.email@example.com" />
               </div>
-
+              
               <div className="space-y-2">
                 <Label htmlFor="phone">Phone Number</Label>
-                <Input id="phone" type="tel" placeholder="Enter your phone number" />
+                <Input id="phone" type="tel" placeholder="+91 98765 43210" />
               </div>
-
+              
               <div className="space-y-2">
-                <Label htmlFor="service">Service Type</Label>
+                <Label htmlFor="service">Service Interest</Label>
                 <Select>
                   <SelectTrigger>
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="wedding">Wedding Photography</SelectItem>
-                    <SelectItem value="portrait">Portrait Session</SelectItem>
-                    <SelectItem value="event">Event Coverage</SelectItem>
-                    <SelectItem value="commercial">Commercial Photography</SelectItem>
-                    <SelectItem value="maternity">Maternity & Newborn</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
+                    <SelectItem value="mutual-funds">Mutual Funds</SelectItem>
+                    <SelectItem value="sip">SIP Planning</SelectItem>
+                    <SelectItem value="life-insurance">Life Insurance</SelectItem>
+                    <SelectItem value="health-insurance">Health Insurance</SelectItem>
+                    <SelectItem value="motor-insurance">Motor Insurance</SelectItem>
+                    <SelectItem value="portfolio-management">Portfolio Management</SelectItem>
+                    <SelectItem value="financial-planning">Complete Financial Planning</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
-
+              
               <div className="space-y-2">
-                <Label htmlFor="eventDate">Event Date (if applicable)</Label>
-                <Input id="eventDate" type="date" />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="budget">Budget Range</Label>
-                <Select>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select budget range" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="under-50k">Under ₹50,000</SelectItem>
-                    <SelectItem value="50k-1l">₹50,000 - ₹1,00,000</SelectItem>
-                    <SelectItem value="1l-2l">₹1,00,000 - ₹2,00,000</SelectItem>
-                    <SelectItem value="over-2l">Over ₹2,00,000</SelectItem>
-                    <SelectItem value="discuss">Let's Discuss</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="message">Tell Me About Your Vision</Label>
+                <Label htmlFor="message">Message</Label>
                 <Textarea 
                   id="message" 
-                  placeholder="Describe your event, style preferences, and any specific requirements..."
-                  className="min-h-[120px]"
+                  placeholder="Tell me about your financial goals and how I can help you..."
+                  rows={4}
                 />
               </div>
-
-              <Button size="lg" className="w-full">
-                Send Message
+              
+              <Button className="w-full" size="lg">
+                Schedule Consultation
               </Button>
             </CardContent>
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8 order-1 lg:order-2">
-            {/* Contact Details */}
+          <div className="space-y-8">
             <Card>
               <CardHeader>
                 <CardTitle className="text-xl text-foreground">Contact Information</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Phone className="h-5 w-5 text-primary mt-1" />
+                <div className="flex items-center space-x-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Phone className="h-5 w-5 text-primary" />
+                  </div>
                   <div>
-                    <h3 className="font-medium text-foreground">Phone</h3>
+                    <p className="font-medium text-foreground">Phone</p>
                     <p className="text-muted-foreground">+91 98765 43210</p>
-                    <p className="text-sm text-muted-foreground">Available 9 AM - 9 PM</p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <Mail className="h-5 w-5 text-primary mt-1" />
+                
+                <div className="flex items-center space-x-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Mail className="h-5 w-5 text-primary" />
+                  </div>
                   <div>
-                    <h3 className="font-medium text-foreground">Email</h3>
-                    <p className="text-muted-foreground">atharva@kadamphotography.com</p>
-                    <p className="text-sm text-muted-foreground">Response within 24 hours</p>
+                    <p className="font-medium text-foreground">Email</p>
+                    <p className="text-muted-foreground">info@dhanketuu.com</p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <MapPin className="h-5 w-5 text-primary mt-1" />
-                  <div>
-                    <h3 className="font-medium text-foreground">Location</h3>
-                    <p className="text-muted-foreground">Mumbai, Maharashtra</p>
-                    <p className="text-sm text-muted-foreground">Available for travel worldwide</p>
+                
+                <div className="flex items-center space-x-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <MapPin className="h-5 w-5 text-primary" />
                   </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Clock className="h-5 w-5 text-primary mt-1" />
                   <div>
-                    <h3 className="font-medium text-foreground">Business Hours</h3>
-                    <p className="text-muted-foreground">Mon - Sat: 9 AM - 9 PM</p>
-                    <p className="text-sm text-muted-foreground">Sunday: By appointment</p>
+                    <p className="font-medium text-foreground">Office</p>
+                    <p className="text-muted-foreground">
+                      123 Business Center, Financial District<br />
+                      Mumbai, Maharashtra 400001
+                    </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Social Media */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl text-foreground">Follow My Work</CardTitle>
+                <CardTitle className="text-xl text-foreground">Office Hours</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <Instagram className="h-5 w-5 text-primary" />
-                  <div>
-                    <p className="font-medium text-foreground">@atharvakadamphotography</p>
-                    <p className="text-sm text-muted-foreground">Daily updates and behind-scenes</p>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-4">
+                    <Clock className="h-5 w-5 text-primary" />
+                    <div>
+                      <p className="font-medium text-foreground">Monday - Friday</p>
+                      <p className="text-muted-foreground">9:00 AM - 6:00 PM</p>
+                    </div>
                   </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <Facebook className="h-5 w-5 text-primary" />
-                  <div>
-                    <p className="font-medium text-foreground">Atharva Kadam Photography</p>
-                    <p className="text-sm text-muted-foreground">Latest work and client features</p>
+                  <div className="flex items-center space-x-4 ml-9">
+                    <div>
+                      <p className="font-medium text-foreground">Saturday</p>
+                      <p className="text-muted-foreground">10:00 AM - 4:00 PM</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4 ml-9">
+                    <div>
+                      <p className="font-medium text-foreground">Sunday</p>
+                      <p className="text-muted-foreground">Closed</p>
+                    </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* FAQ */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl text-foreground">Quick FAQ</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-medium text-foreground mb-1">How far in advance should I book?</h4>
-                  <p className="text-sm text-muted-foreground">For weddings, 6-12 months. Other sessions can be booked 2-4 weeks in advance.</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-medium text-foreground mb-1">Do you travel for destination weddings?</h4>
-                  <p className="text-sm text-muted-foreground">Yes! I love destination weddings and am available for travel worldwide.</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-medium text-foreground mb-1">How long until I receive my photos?</h4>
-                  <p className="text-sm text-muted-foreground">Wedding galleries: 4-6 weeks. Portrait sessions: 2-3 weeks.</p>
-                </div>
+            <Card className="bg-primary/5">
+              <CardContent className="p-6">
+                <h3 className="font-bold text-foreground mb-2">Free Consultation</h3>
+                <p className="text-muted-foreground text-sm">
+                  First consultation is always free. I'll analyze your current financial 
+                  situation and provide personalized recommendations.
+                </p>
               </CardContent>
             </Card>
           </div>
